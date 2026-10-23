@@ -205,5 +205,49 @@ class TransferTests(unittest.TestCase):
             source_data(note, template)
 
 
+class RedirectSafetyTests(unittest.TestCase):
+    def test_cross_origin_redirect_is_rejected_without_forwarding_token(self):
+        import http.server
+        import threading
+
+        hits = []
+
+        class Target(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):
+                hits.append(self.path)
+                self.send_response(200)
+                self.end_headers()
+                self.wfile.write(b'{}')
+
+            def log_message(self, *args):
+                pass
+
+        class Source(http.server.BaseHTTPRequestHandler):
+            def do_GET(self):
+                self.send_response(302)
+                self.send_header('Location', f'http://127.0.0.1:{target.server_port}/steal')
+                self.end_headers()
+
+            def log_message(self, *args):
+                pass
+
+        target = http.server.HTTPServer(('127.0.0.1', 0), Target)
+        source = http.server.HTTPServer(('127.0.0.1', 0), Source)
+        for server in (target, source):
+            threading.Thread(target=server.serve_forever, daemon=True).start()
+        original = t.BASE
+        t.BASE = f'http://127.0.0.1:{source.server_port}'
+        try:
+            with patch.dict('os.environ', {'MAIMEMO_TOKEN': 'fake-token'}):
+                api = t.API()
+                with self.assertRaises(RuntimeError):
+                    api.call('GET', '/decks')
+            self.assertEqual(hits, [])
+        finally:
+            t.BASE = original
+            source.shutdown()
+            target.shutdown()
+
+
 if __name__ == '__main__':
     unittest.main()

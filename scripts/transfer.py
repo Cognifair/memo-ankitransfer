@@ -21,6 +21,17 @@ from anki_source import ensure_running, invoke, notes_for, source_data
 BASE = 'https://open.maimemo.com/open/api/v1/markji'
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Credential-bearing requests must never follow a redirect to another origin."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise urllib.error.HTTPError(req.full_url, code,
+                                     'redirects are not allowed for API requests', headers, fp)
+
+
+_OPENER = urllib.request.build_opener(_NoRedirect())
+
+
 def digest(data):
     return hashlib.sha256(data).hexdigest()
 
@@ -224,7 +235,7 @@ class API:
                      **({'Content-Type': content_type} if content_type else {})})
         self.last_request = time.monotonic()
         try:
-            with urllib.request.urlopen(request, timeout=60) as response:
+            with _OPENER.open(request, timeout=60) as response:
                 result = json.load(response)
         except urllib.error.HTTPError as exc:
             # Do not log raw bodies: they can include signed media URLs or echoed inputs.
