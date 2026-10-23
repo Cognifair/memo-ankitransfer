@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.3 — 2026-10-23
+
+- 修复：`agents/openai.yaml` 补充 `default_prompt`，`display_name` 带上版本号，与其他 Memo 技能保持一致。
+- README 的「Memo 系列」表与 `references/satellites.md` 改由 `memo-series.json` 生成（`sync-series`）。
+
 ## v1.1.2 — 2026-10-23
 
 - 变更：展示名正式采用「**迁墨**」（迁 Anki → 墨墨记忆卡）。`SKILL.md` 描述、标题与触发词、`agents/openai.yaml` 的 `display_name`、`README.md` 标题同步更新；仓库名与调用标识仍为 `memo-ankitransfer`。
