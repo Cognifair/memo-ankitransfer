@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1 — 2026-10-23
+
+- 新增：根目录 `version.json`（`id` / `version` / `updated_at`），作为墨卡大师 `references/satellites.md` 支链版本检查的版本源；此前无该文件，支链只能跳过版本核对。
+
 ## v1.1.0 — 2026-10-23
 
 - 新增：同组多矩形不再整体拒收，按「先组序、再组内序」拆成连续 `index` 的独立遮罩；`manifest.json` 记录 `group_count`、`mask_count`、`flattened_groups`。

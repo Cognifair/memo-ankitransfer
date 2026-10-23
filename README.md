@@ -28,6 +28,8 @@
 ~/.agents/skills/memo-ankitransfer/
 ```
 
+仓库根目录的 `version.json`（`id` / `version` / `updated_at`）是版本源：墨卡大师的支链检查会读 `https://raw.githubusercontent.com/Cognifair/memo-ankitransfer/main/version.json`，升版时与 `SKILL.md` 的 `metadata.version` 保持一致。
+
 ## 快速开始
 
 ```bash
