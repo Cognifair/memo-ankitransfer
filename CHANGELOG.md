@@ -1,9 +1,21 @@
 # Changelog
 
+## v1.1.4 — 2026-10-24
+
+### 变更
+
+- 新增 MIT `LICENSE`，README 补 License 说明。
+
 ## v1.1.3 — 2026-10-23
 
 - 修复：`agents/openai.yaml` 补充 `default_prompt`，`display_name` 带上版本号，与其他 Memo 技能保持一致。
 - README 的「Memo 系列」表与 `references/satellites.md` 改由 `memo-series.json` 生成（`sync-series`）。
+
+## v1.1.4 — 2026-10-24
+
+### 变更
+
+- 新增 MIT `LICENSE`，README 补 License 说明。
 
 ## v1.1.2 — 2026-10-23
 
@@ -11,9 +23,21 @@
 - 关联：墨卡大师 `references/satellites.md` 中该支链的 `name` 同步改为「迁墨 Memo-Ankitransfer」。
 - 说明：本次只改命名，转换与导入逻辑未变。
 
+## v1.1.4 — 2026-10-24
+
+### 变更
+
+- 新增 MIT `LICENSE`，README 补 License 说明。
+
 ## v1.1.1 — 2026-10-23
 
 - 新增：根目录 `version.json`（`id` / `version` / `updated_at`），作为墨卡大师 `references/satellites.md` 支链版本检查的版本源；此前无该文件，支链只能跳过版本核对。
+
+## v1.1.4 — 2026-10-24
+
+### 变更
+
+- 新增 MIT `LICENSE`，README 补 License 说明。
 
 ## v1.1.0 — 2026-10-23
 
@@ -22,6 +46,12 @@
 - 变更：`scan` 输出 `groups`、`masks`、`flattened_groups`、`flattened_notes`；`prepare` 输出遮罩总数与拆分统计。
 - 变更：`source_data` 只校验组结构，不再因为组内多矩形报错；矩形合法性仍由 `convert` 逐块校验。
 - 测试：新增多矩形拆分顺序、分组来源校验等用例，共 15 个离线用例。
+
+## v1.1.4 — 2026-10-24
+
+### 变更
+
+- 新增 MIT `LICENSE`，README 补 License 说明。
 
 ## v1.0.0 — 2026-10-23
 

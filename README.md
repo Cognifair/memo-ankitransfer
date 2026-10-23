@@ -97,7 +97,7 @@ python -X utf8 -m unittest discover -s tests -v
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 ## Memo 系列
 
