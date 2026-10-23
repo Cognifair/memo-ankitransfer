@@ -1,11 +1,13 @@
 ---
 name: memo-ankitransfer
-description: Memo-Ankitransfer，直接连接本机 Anki（无需导出 apkg/CSV），把图片挖空卡的原图与矩形遮罩转成墨墨记忆卡原生图片遮罩，生成位置预览，并通过官方 OpenAPI 导入指定牌组。同组多矩形按原顺序拆成独立遮罩。用于 Anki 转墨墨、Anki 图片遮盖迁移、Memo-Ankitransfer；当前实测支持 Image/Masks/Mode 字段的 26讲义模板，不承诺支持所有 Image Occlusion 插件或迁移学习进度。
+description: 迁墨 Memo-Ankitransfer，直接连接本机 Anki（无需导出 apkg/CSV），把图片挖空卡的原图与矩形遮罩转成墨墨记忆卡原生图片遮罩，生成位置预览，并通过官方 OpenAPI 导入指定牌组。同组多矩形按原顺序拆成独立遮罩。用于 Anki 转墨墨、Anki 迁墨、图片遮盖迁移、Memo-Ankitransfer；当前实测支持 Image/Masks/Mode 字段的 26讲义模板，不承诺支持所有 Image Occlusion 插件或迁移学习进度。
 metadata:
   version: "1.1.1"
 ---
 
-# Memo-Ankitransfer
+# 迁墨 Memo-Ankitransfer
+
+展示名「**迁墨**」（英文标识与仓库名仍为 `memo-ankitransfer`）：把 Anki 里的图片挖空卡迁到墨墨记忆卡。
 
 把「Anki 原图 + 比例矩形 → Markji 原图 + .msk1」流程变成可复用命令：直接读本机 Anki，不需要导出任何 Anki 文件，也不把模板 JavaScript 写进墨墨正文。
 

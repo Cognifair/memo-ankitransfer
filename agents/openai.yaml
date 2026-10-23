@@ -1,3 +1,3 @@
 interface:
-  display_name: "Memo-Ankitransfer"
-  short_description: "免导出直连本机 Anki，把图片挖空转成墨墨原生遮罩，预览位置并通过官方 API 导入牌组"
+  display_name: "迁墨 Memo-Ankitransfer"
+  short_description: "迁墨：免导出直连本机 Anki，把图片挖空转成墨墨原生遮罩，预览位置并通过官方 API 导入牌组"
