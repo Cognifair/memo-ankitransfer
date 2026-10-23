@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.2 — 2026-10-23
+
+- 变更：展示名正式采用「**迁墨**」（迁 Anki → 墨墨记忆卡）。`SKILL.md` 描述、标题与触发词、`agents/openai.yaml` 的 `display_name`、`README.md` 标题同步更新；仓库名与调用标识仍为 `memo-ankitransfer`。
+- 关联：墨卡大师 `references/satellites.md` 中该支链的 `name` 同步改为「迁墨 Memo-Ankitransfer」。
+- 说明：本次只改命名，转换与导入逻辑未变。
+
 ## v1.1.1 — 2026-10-23
 
 - 新增：根目录 `version.json`（`id` / `version` / `updated_at`），作为墨卡大师 `references/satellites.md` 支链版本检查的版本源；此前无该文件，支链只能跳过版本核对。
