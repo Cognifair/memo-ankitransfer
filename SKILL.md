@@ -2,7 +2,7 @@
 name: memo-ankitransfer
 description: 迁墨 Memo-Ankitransfer，直接连接本机 Anki（无需导出 apkg/CSV），把图片挖空卡的原图与矩形遮罩转成墨墨记忆卡原生图片遮罩，生成位置预览，并通过官方 OpenAPI 导入指定牌组。同组多矩形按原顺序拆成独立遮罩。用于 Anki 转墨墨、Anki 迁墨、图片遮盖迁移、Memo-Ankitransfer；当前实测支持 Image/Masks/Mode 字段的 26讲义模板，不承诺支持所有 Image Occlusion 插件或迁移学习进度。
 metadata:
-  version: "1.1.5"
+  version: "1.1.6"
 ---
 
 # 迁墨 Memo-Ankitransfer
@@ -77,4 +77,4 @@ python -X utf8 scripts/transfer.py verify --package <输出目录>
 - 401/403 报凭证/权限问题，不换账户；429 尊重错误提供的重试时间，不循环；批量在首个失败处停止，保留先前完成卡。
 - 上次进程异常退出留下 `import.lock` 时，先确认没有同包进程运行、查看 receipt 再处理锁，不能为了重试直接清空 receipt。不得把签名媒体 URL、Bearer、Cookie 或用户材料收进技能本体或发布包。
 
-本技能不依赖 Memo-Cardest 的启动同步或会员询问；只在实际 API 路线需要凭证。新 Memo 技能的 GitHub 发布收尾按本机 `skill-publisher` 的明确授权处理，不自动发布。
+本技能不依赖 Memo-Cardest 的启动同步或会员询问；只在实际 API 路线需要凭证。新 Memo 技能的 GitHub 发布收尾按本机 `maimemo-publisher` 的明确授权处理，不自动发布。

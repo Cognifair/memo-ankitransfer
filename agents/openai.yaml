@@ -1,4 +1,4 @@
 interface:
-  display_name: "迁墨 Memo-Ankitransfer v1.1.5"
+  display_name: "迁墨 Memo-Ankitransfer v1.1.6"
   short_description: "迁墨：免导出直连本机 Anki，把图片挖空转成墨墨原生遮罩，预览位置并通过官方 API 导入牌组"
   default_prompt: "使用 $memo-ankitransfer（迁墨）把本机 Anki 的图片挖空卡转成墨墨记忆卡原生遮罩：先确认模板与预览位置，再通过官方 OpenAPI 导入指定牌组；不迁移学习进度。"

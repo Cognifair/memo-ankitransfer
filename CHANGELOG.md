@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.6 — 2026-10-28
+
+影响面：memo-ankitransfer(SKILL.md)
+
+### 变更
+
+- 文档中的发布器名称由 `skill-publisher` 更新为 `maimemo-publisher`，与当前技能名保持一致。
+
 ## v1.1.5 — 2026-10-24
 
 ### 修复
