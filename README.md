@@ -1,5 +1,7 @@
 # 迁墨 Memo-Ankitransfer
 
+> 🌐 [墨卡大师 · 专业制卡工作流](https://moka-master.app.workbuddy.host/?sharecode=ZYHGDS4GEB)
+
 「**迁墨**」= 把 Anki 的图片挖空卡迁到墨墨。仓库名与调用标识仍是 `memo-ankitransfer`。
 
 把 Anki 的图片挖空卡（原图 + 比例矩形遮罩）转成墨墨记忆卡原生图片遮罩（`.msk1`），生成位置预览，并可选择通过官方 OpenAPI 导入指定牌组。

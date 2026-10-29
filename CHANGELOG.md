@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.7 — 2026-10-30
+
+影响面：memo-ankitransfer(README.md)
+
+### 变更
+
+- README 顶部增加「墨卡大师 · 专业制卡工作流」在线介绍页链接。
+
 ## v1.1.6 — 2026-10-28
 
 影响面：memo-ankitransfer(SKILL.md)
