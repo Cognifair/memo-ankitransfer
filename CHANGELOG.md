@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.8 — 2026-10-30
+
+影响面：memo-ankitransfer(README.md, references/satellites.md)
+
+### 变更
+
+- Memo 系列清单加入「卡跳跳 Memo-CardLink」，同步 README 系列表与 satellites。
+
 ## v1.1.7 — 2026-10-30
 
 影响面：memo-ankitransfer(README.md)
